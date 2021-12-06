@@ -1,0 +1,81 @@
+a.buttonLink {
+    text-decoration: none;
+    padding: 5px;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+a.buttonLink:hover {
+    background-color: rgb(224, 136, 21);
+}
+
+.b-rad-1 {
+    border-radius: 10px;
+}
+
+
+.b-rad-2 {
+    border-radius: 10px;
+}
+
+
+.ta-c{
+    text-align: center;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.floatingButton{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    background: url(edit.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    background-color: white;
+    border-radius: 20px;
+
+
+}
+
+
+
+.editButton{
+    width: 40px;
+    height: 40px;
+    background: url(edit.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    border-radius: 4px;
+    background-color: grey;
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+
+
+}
+
+
+.editor{
+    position: fixed;
+    background-color: red;
+    visibility: hidden;
+    left: 0px;
+    bottom: 0px;
+
+}
+
+
+.rela{
+    position: relative;
+}
+
+
+

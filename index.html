@@ -12,138 +12,32 @@
 
     <title>Hello, world!</title>
 
-
-    <style type="text/css">
-        a.buttonLink {
-            text-decoration: none;
-            padding: 5px;
-            background-color: antiquewhite;
-            cursor: pointer;
-        }
-
-        a.buttonLink:hover {
-            background-color: rgb(224, 136, 21);
-        }
-
-        .b-rad-1 {
-            border-radius: 10px;
-        }
-
-
-        .b-rad-2 {
-            border-radius: 10px;
-        }
-
-        .name {
-            text-align: center;
-
-        }
-
-
-        .bold {
-            font-weight: 700;
-        }
-
-        .floatingButton{
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 40px;
-            height: 40px;
-            background: url(edit.png);
-            background-repeat: no-repeat;
-            background-size: 30px 30px;
-            background-position: center;
-            background-color: white;
-            border-radius: 20px;
-
-
-        }
-
-
-
-        .editButton{
-            width: 40px;
-            height: 40px;
-            background: url(edit.png);
-            background-repeat: no-repeat;
-            background-size: 30px 30px;
-            background-position: center;
-            border-radius: 4px;
-            background-color: grey;
-            position: absolute;
-            top: 0;
-            right: 0;
-            visibility: hidden;
-
-
-        }
-
-
-        .editor{
-            position: fixed;
-            background-color: red;
-            visibility: hidden;
-            left: 0px;
-            bottom: 0px;
-
-        }
-
-
-        .rela{
-            position: relative;
-        }
-
-
-
-    </style>
-
+    <link href="Style.css" rel="stylesheet">
 
 </head>
 
 <body>
-
-
-
-
     <div class="container-fluid">
         <div class="row px-2 mt-3">
             <div class="col-10 col-sm-10 col-md-3 px-1 mx-auto bg-primary b-rad-1 rela">
                 <button class="editButton" id="editMode2"></button>
                 <div class="p-2 m-2">
-                   
-                   
-                        <img src="random.jpeg" class="b-rad-2 col-12">
-                        <h2 class="name col-12"> Ahmed Ramadan</h2>
-                    
-
-
-
-
+                    <img src="random.jpeg" class="b-rad-2 col-12">
+                    <h2 class="ta-c col-12"> Ahmed Ramadan</h2>
                     <div class="row">
-
-
-
                         <div class="col-6 ps-md-1 ps-5">
                             <div class="bold">Age:</div>
                             <div class="bold">Location:</div>
                             <div class="bold">Nationality:</div>
-
                         </div>
-
                         <div class="col-6">
                             <div class="right">20</div>
                             <div class="right">Germany</div>
                             <div class="right">Egyptian</div>
                         </div>
-
-
-
                         <!-- <a class="buttonLink col-6  mx-auto mb-2" href="#aboutme">
                             About Me
                         </a>
-                        
-
                         <div class="col-6">
 
                         </div>
@@ -157,62 +51,30 @@
                         <!-- TODO: add Functionality -->
                         <!-- <a href="./aboutMe.html" class="col-12  mx-auto">DOWNLOAD RESUME</a> -->
                     </div>
-
                 </div>
             </div>
-
-
-
             <div class="col-10 col-sm-10 col-md-8 col-lg-8 mx-auto bg-primary mt-2 mt-sm-2 mt-md-0 b-rad-2 rela">
-
-                <button class="editButton" id="editMode4"  data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
-                <!-- NEW TAB -->
-
-
+                <button class="editButton" id="editMode4" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"></button>
                 <div class="col-7 mx-auto">
-    
-                    <h1 style="text-align: center; ">About Me</h1>
-                
-
-                
-                    <div class="pb-5" id="aboutmeSaved">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit sapien, interdum acrhoncus tempus, ultricies non nunc. Curabitur rhoncus, dolor id ultrices semper, ligula libero eleifend velit, ac accumsan mi erat vel nunc. Nullam sagittis velit erat, vel congue metuplacerat ac. Integer sit amet facilisis augue. Sed et laoreet quam. Sed eu ullamcorper velit, vel auctor sem. Phasellus blandit venenatis lectus, ac fringilla mauris mollis at. Suspendisse suscipit mollis nulla, ut ultricies urna egestas id. Donec nec leo sit amet massa posuere vehicula. Vivamus laoreet ultricies vehicula. Praesent iaculis porttitor eros, tempus bibendum leo ultricies vitae. Curabitur tempor accumsan auctor. Etiam velit erat, ornare eu quam ut, auctor ultrices mauris.
-
-                    </div>
-
-                    
-                        <h1 style="text-align: center;">Personal Info</h1>
-                    
-                    
-                
-
-
-
-                    
-
-
+                    <h1 class="ta-c">About Me</h1>
+                    <div class="pb-5" id="aboutmeSaved"></div>
+                    <h1 class="ta-c">Personal Info</h1>
                     <div class="row pb-5">
                         <div class="col-6">
                             <div class="bold pb-2">Name:</div>
                             <div class="bold pb-2">Birthday:</div>
                             <div class="bold pb-2">Place of Birth:</div>
                             <div class="bold pb-2">Nationality:</div>
-
                         </div>
-
                         <div class="col-6">
-                            <div class=" pb-2" id="nameSaved">Ahmed Ramadan</div>
-                            <div class=" pb-2" id="birthdaySaved">15.10.2001</div>
-                            <div class=" pb-2" id="pobSaved">Cairo</div>
-                            <div class=" pb-2" id="nationSaved">Egyptian</div>
+                            <div class=" pb-2" id="nameSaved"></div>
+                            <div class=" pb-2" id="birthdaySaved"></div>
+                            <div class=" pb-2" id="pobSaved"></div>
+                            <div class=" pb-2" id="nationSaved"></div>
                         </div>
                     </div>
-
-                        <h1 style="text-align: center;">Academic</h1>
-                    
-                    
-            
-
-
+                    <h1 class="ta-c">Academic</h1>
                     <div class="row pb-5">
                         <div class="col-6">
                             <div class="bold">Since 11/20</div>
@@ -221,7 +83,6 @@
                             <div class="bold"></div>
 
                         </div>
-
                         <div class="col-6">
                             <div class="right">University of Stuttgart</div>
                             <div class="right">Mechatronics (BSc)</div>
@@ -230,159 +91,69 @@
                             <div class="right">Abitur (NC: 1,9)</div>
                         </div>
                     </div>
-
                 </div>
+            </div>
+        </div>
+    </div>
+    <button class="floatingButton" id="change"></button>
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- MODAL HEADER -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <!-- INSIDE MODAL -->
+                    <h1 class="ta-c" id="aboutme">About Me</h1>
+                    <textarea class="col-12" style="resize: none;" rows="3" type="text" id="aboutmeModal"
+                        value=""></textarea>
+                    <br>
+                    <div class="row pb-5">
+                        <div class="col-6">
+                            <div class="bold pb-2">Name:</div>
+                            <div class="bold pb-2">Birthday:</div>
+                            <div class="bold pb-2">Place of Birth:</div>
+                            <div class="bold pb-2">Nationality:</div>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="nameModal" value="">
 
-                <!-- END NEW TAB -->
-
-
-
-
-
+                            <!-- Trying to make birthdate flexible -->
+                            <!-- <div class="col-4"> 
+                                <input type="text" required id="birthdayModal" value="">
+                            </div>
+                            <div class="col-4"> 
+                                <input type="text" required id="birthdayModal" value="">
+                            </div>
+                            <div class="col-4"> 
+                                <input type="text" required id="birthdayModal" value="">
+                            </div> -->
+                                <input type="number" min="1" max="31" id="bDayModal" class="col-3" value="">
+                                <input type="number" min="1" max="12" id="bMonthModal" class="col-3" value="">
+                                <input type="number" min="1945" max="2005" id="bYearModal" class="col-4" value="">
+                            <!-- <input type="date" required id="birthdayModal" value=""> -->
+                            <input type="text" id="pobModal" value="">
+                            <input type="text" id="nationModal" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="saveChanges()" data-bs-dismiss="modal">Save changes</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <button class="floatingButton" id="change"></button>        
-        </button>
-
-
-  
-
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-            <!-- MODAL HEADER -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    
-        <div class="modal-body">
-          
-            <!-- INSIDE MODAL -->
-            <h1 style="text-align: center; " id="aboutme">About Me</h1>
-            <input class="col-12 "  type="text" id="aboutmeModal" value="">
-            <br>
-
-
-            
-            <div class="row pb-5">
-                <div class="col-6">
-                    <div class="bold pb-2">Name:</div>
-                    <div class="bold pb-2">Birthday:</div>
-                    <div class="bold pb-2">Place of Birth:</div>
-                    <div class="bold pb-2">Nationality:</div>
-
-                </div>
-
-                <div class="col-6">
-                    <input  type="text" id="nameModal" value="">
-                    <input  type="text" id="birthdayModal" value="">
-                    <input  type="text" id="pobModal" value="">
-                    <input  type="text" id="nationModal" value="">
-                </div>
-            </div>
-
-
-
-
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick="saveChanges()" data-bs-dismiss="modal">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-        
-    <!-- <img src="edit.png" class="floatingButton" >     -->
-
-
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-
-    <script>
-        var inputName = document.getElementById("aboutmeModal");
-        inputName.value =  document.getElementById("aboutmeSaved").innerHTML;
-
-
-        var inputName = document.getElementById("nameModal");
-        inputName.value =  document.getElementById("nameSaved").innerHTML;
-
-        var inputName = document.getElementById("birthdayModal");
-        inputName.value =  document.getElementById("birthdaySaved").innerHTML;
-
-        var inputName = document.getElementById("pobModal");
-        inputName.value =  document.getElementById("pobSaved").innerHTML;
-
-        var inputName = document.getElementById("nationModal");
-        inputName.value =  document.getElementById("nationSaved").innerHTML;
-
-
-
-        function saveChanges(){
-            var name = document.getElementById("aboutmeModal").value;
-            document.getElementById("aboutmeSaved").innerHTML = name;
-
-            var name = document.getElementById("nameModal").value;
-            document.getElementById("nameSaved").innerHTML = name;
-
-            var name = document.getElementById("birthdayModal").value;
-            document.getElementById("birthdaySaved").innerHTML = name;
-
-            var name = document.getElementById("pobModal").value;
-            document.getElementById("pobSaved").innerHTML = name;
-
-            var name = document.getElementById("nationModal").value;
-            document.getElementById("nationSaved").innerHTML = name;
-
-        }
-
-
-
-
-
-
-        $(function(){
-            $("#change").on('click', function(){
-                $('#editMode2').css({
-                    'visibility': 'visible'
-                }
-
-                );
-
-
-                $('#editMode4').css({
-                    'visibility': 'visible'
-                }
-
-                );
-            });
-        });
-
-
-    </script>
-
+    <script src="script.js"></script>
 
 </body>
 
