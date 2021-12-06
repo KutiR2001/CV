@@ -62,6 +62,24 @@
             background-color: rgb(224, 136, 21);
         }
 
+        .b-rad-1 {
+            border-radius: 10px;
+        }
+
+
+        .b-rad-2 {
+            border-radius: 10px;
+        }
+
+        .name {
+            text-align: center;
+
+        }
+
+
+        .left {
+            font-weight: 700;
+        }
     </style>
 
 
@@ -69,14 +87,42 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12 col-md-3 px-1 bg-dark" id="sticky-sidebar">
+        <div class="row px-2 mt-3">
+            <div class="col-10 col-sm-10 col-md-3 px-1 mx-auto bg-primary b-rad-1">
                 <div class="p-2 m-2">
-                    <img src="random.jpeg" style="width: 100%">
+                    <img src="random.jpeg" style="width: 100%" class="b-rad-2 ">
+
                     <div class="row">
-                        <a class="buttonLink col-3  mx-auto" href="#aboutme">
+
+                        <h2 class="name col-12"> Ahmed Ramadan</h2>
+
+
+                        <div class="col-6 ps-md-1 ps-5">
+                            <div class="left">Age:</div>
+                            <div class="left">Location:</div>
+                            <div class="left">Nationality:</div>
+
+                        </div>
+
+                        <div class="col-6">
+                            <div class="right">20</div>
+                            <div class="right">Germany</div>
+                            <div class="right">Egyptian</div>
+                        </div>
+
+
+
+                        <a class="buttonLink col-6  mx-auto mb-2" href="#aboutme">
                             About Me
                         </a>
+                        <div class="col-6">
+
+                        </div>
+
+
+
+
+
                         <a class="buttonLink col-3 mx-auto">
                             Resume
                         </a>
@@ -84,17 +130,23 @@
                             Contact
                         </a>
                         <!-- TODO: add Functionality -->
-                        <a class="col-12  mx-auto">DOWNLOAD RESUME</a>
+                        <a href="./aboutMe.html" class="col-12  mx-auto">DOWNLOAD RESUME</a>
                     </div>
 
                 </div>
             </div>
-            <div class="col-9">
 
-                <div class="container" style="background-color: grey;">
+
+
+            <div class="col-10 col-sm-10 col-md-8 col-lg-8 mx-auto bg-dark mt-2 mt-sm-2 mt-md-0 b-rad-2">
+
+
+
+
+                <div class="container-fluid b-rad-1" style="background-color: grey;">
                     <h1 style="text-align: center;" id="aboutme">About Me</h1>
 
-                    <div style="margin: 0 auto; background-color: yellow; width:  500px; padding-top: 150px;">
+                    <div class="col-7 mx-auto">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit sapien, interdum ac
                         rhoncus tempus, ultricies non nunc. Curabitur rhoncus, dolor id ultrices semper, ligula libero
                         eleifend velit, ac accumsan mi erat vel nunc. Nullam sagittis velit erat, vel congue metus
@@ -105,10 +157,21 @@
                         leo ultricies vitae. Curabitur tempor accumsan auctor. Etiam velit erat, ornare eu quam ut,
                         auctor ultrices mauris.
 
-                        <!-- add signature -->
-                        <img src="myimage.png" width="500px">
+                    </div>
 
-                        <h1 style="text-align: center; padding-top: 150px;">Personal Info</h1>
+                    <div style="margin: 0 auto; background-color: #d1cec7; width:  500px; padding-top: 100px;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit sapien, interdum ac
+                        rhoncus tempus, ultricies non nunc. Curabitur rhoncus, dolor id ultrices semper, ligula libero
+                        eleifend velit, ac accumsan mi erat vel nunc. Nullam sagittis velit erat, vel congue metus
+                        placerat ac. Integer sit amet facilisis augue. Sed et laoreet quam. Sed eu ullamcorper velit,
+                        vel auctor sem. Phasellus blandit venenatis lectus, ac fringilla mauris mollis at. Suspendisse
+                        suscipit mollis nulla, ut ultricies urna egestas id. Donec nec leo sit amet massa posuere
+                        vehicula. Vivamus laoreet ultricies vehicula. Praesent iaculis porttitor eros, tempus bibendum
+                        leo ultricies vitae. Curabitur tempor accumsan auctor. Etiam velit erat, ornare eu quam ut,
+                        auctor ultrices mauris.
+
+
+                        <h1 style="text-align: center; padding-top: 100px;">Personal Info</h1>
 
 
                         <div class="row pb-5">
@@ -127,39 +190,67 @@
                                 <div class="right">Egyptian</div>
                             </div>
                         </div>
-                    </div>
 
 
-                    <h1 style="text-align: center;">Academic</h1>
 
-                    <div class="float-container">
+                        <h1 style="text-align: center;">Academic</h1>
 
-                        <div class="float-child">
-                            <div class="green">Since 11/20</div>
+
+                        <div class="row pb-5">
+                            <div class="col-6 ps-5">
+                                <div class="left">Since 11/20</div>
+                                <div class="left">09/2006 – 06/2020</div>
+                                <div class="left">Place of Birth:</div>
+                                <div class="left">Nationality:</div>
+
+                            </div>
+
+                            <div class="col-6">
+                                <div class="right">University of Stuttgart</div>
+                                <div class="right">15.10.2001</div>
+                                <div class="right">Cairo</div>
+                                <div class="right">Egyptian</div>
+                            </div>
+
+
+
+
+
+
 
                         </div>
 
-                        <div class="float-child">
-                            <div class="up" style="font-weight: 700;">University of Stuttgart</div>
-                            <div class="down">Mechatronics (BSc)</div>
+
+
+
+
+
+                        <h1 style="text-align: center;">Academic</h1>
+
+
+                        <div class="row pb-5">
+                            <div class="col-6 ps-5">
+                                <div class="left">Since 11/20</div>
+                                <br><br>
+                                <div class="left">09/2006 – 06/2020</div>
+                                <div class="left"></div>
+
+                            </div>
+
+                            <div class="col-6">
+                                <div class="right">University of Stuttgart</div>
+                                <div class="right">Mechatronics (BSc)</div>
+                                <br>
+                                <div class="right">DEO Kairo</div>
+                                <div class="right">Abitur (NC: 1,9)</div>
+                            </div>
                         </div>
-
                     </div>
-
-                    <div class="float-child">
-                        <div class="green">09/2006 – 06/2020</div>
-                    </div>
-
-                    <div class="float-child">
-                        <div class="up" style="font-weight: 700;">Deutsche Evangelische Oberschule Kairo</div>
-                        <div class="down">Abitur (NC: 1,9)</div>
-                    </div>
-
                 </div>
-
             </div>
         </div>
     </div>
+
 
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -169,6 +260,8 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
