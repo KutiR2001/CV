@@ -20,10 +20,11 @@
     <div class="container-fluid">
         <div class="row px-2 mt-3">
             <div class="col-10 col-sm-10 col-md-3 px-1 mx-auto bg-primary b-rad-1 rela">
-                <button class="editButton" id="editMode2"></button>
+                <!-- <button class="editButton" id="editMode2"></button> -->
+
                 <div class="p-2 m-2">
                     <img src="random.jpeg" class="b-rad-2 col-12">
-                    <h2 class="ta-c col-12"> Ahmed Ramadan</h2>
+                    <h2 class="ta-c col-12" id="nameShown"> Ahmed Ramadan</h2>
                     <div class="row">
                         <div class="col-6 ps-md-1 ps-5">
                             <div class="bold">Age:</div>
@@ -31,7 +32,7 @@
                             <div class="bold">Nationality:</div>
                         </div>
                         <div class="col-6">
-                            <div class="right">20</div>
+                            <div class="right" id="age"></div>
                             <div class="right">Germany</div>
                             <div class="right">Egyptian</div>
                         </div>
@@ -95,7 +96,7 @@
             </div>
         </div>
     </div>
-    <button class="floatingButton" id="change"></button>
+    <button class="floatingButton" data-bs-toggle="modal" data-bs-target="#exampleModal" id="change"></button>
     </button>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -105,16 +106,17 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body">
                     <!-- INSIDE MODAL -->
-                    <h1 class="ta-c" id="aboutme">About Me</h1>
+                    <h3 class="ta-c" id="aboutme">About Me</h3>
                     <textarea class="col-12" style="resize: none;" rows="3" type="text" id="aboutmeModal"
                         value=""></textarea>
                     <br>
-                    <div class="row pb-5">
+                    <h3 class="ta-c">Personal Info</h3>
+                    <div class="row pb-1">
                         <div class="col-6">
                             <div class="bold pb-2">Name:</div>
                             <div class="bold pb-2">Birthday:</div>
                             <div class="bold pb-2">Place of Birth:</div>
-                            <div class="bold pb-2">Nationality:</div>
+                            <div class="bold">Nationality:</div>
                         </div>
                         <div class="col-6">
                             <input type="text" id="nameModal" value="">
@@ -135,8 +137,15 @@
                             <!-- <input type="date" required id="birthdayModal" value=""> -->
                             <input type="text" id="pobModal" value="">
                             <input type="text" id="nationModal" value="">
+                        
                         </div>
                     </div>
+                    <h3 class="ta-c">Academic</h3>
+
+
+
+
+                    
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

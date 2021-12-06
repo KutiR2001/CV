@@ -1,5 +1,3 @@
-
-
         let object = {
             JaboutMe: "drerit nisl, vitae consectetur quam. Nunc id metus in quam convallis fringilla. Duis cursus ex sed odio feugiat, sit amet sagittis leo tristique. Maecenas viverra eu est ut accumsan. Vivamus nec laoreet ex. In aliquet massa nulla, eu bibendum est sodales quis. Cras condimentum fermentum felis, pharetra rutrum enim luctus at. Praesent elementum bibendum sagittis. Integer accumsan odio magna, quis faucibus erat lobortis ac.",
             Jname: "7amada",
@@ -14,11 +12,11 @@
 
         // TODO
         function initOnLoad() {
-            // let name = object.name;
             document.getElementById("aboutmeSaved").innerHTML = object.JaboutMe;
             document.getElementById("nameSaved").innerHTML = object.Jname;
+            document.getElementById("nameShown").innerHTML = object.Jname;
             document.getElementById("birthdaySaved").innerHTML = object.JbDay + "." + object.JbMonth + "." + object.JbYear;
-            // document.getElementById("birthdaySaved").innerHTML = object.JbirthDay;
+            ageCalculcator(object.JbDay, object.JbMonth, object.JbYear);
             document.getElementById("pobSaved").innerHTML = object.JplaceOfBirth;
             document.getElementById("nationSaved").innerHTML = object.Jnationality;
         }
@@ -54,12 +52,14 @@
 
             var name = document.getElementById("nameModal").value;
             document.getElementById("nameSaved").innerHTML = name;
+            document.getElementById("nameShown").innerHTML = name;
 
             var dayNew = document.getElementById("bDayModal").value;
             var monthNew = document.getElementById("bMonthModal").value;
             var yearNew = document.getElementById("bYearModal").value;
 
             addDate(dayNew, monthNew, yearNew);
+            ageCalculcator(dayNew, monthNew, yearNew);
 
             var name = document.getElementById("pobModal").value;
             document.getElementById("pobSaved").innerHTML = name;
@@ -87,6 +87,25 @@
             }
         }
 
+        function ageCalculcator(day, month, year){
+            var today = new Date();
+            var yy = today.getFullYear();
+            var mm = today.getMonth()+1;
+            var dd = today.getDay() + 5;
+            var dyy = yy + " " + mm + " " +dd;
+            console.log(dyy);
+
+            var yearDifference =  yy-year;
+            if(mm-month > 0){
+                document.getElementById("age").innerHTML = yearDifference;
+                // console.log(yearDifference);
+            } else if(mm-month == 0 && dd-day == 0){
+                document.getElementById("age").innerHTML = yearDifference;
+            } else{
+                document.getElementById("age").innerHTML = yearDifference-1;
+            }
+        }
+
 
         function revertToLastSaved(){
             var day = document.getElementById("bDayModal");
@@ -104,20 +123,20 @@
         }
 
 
-        $(function () {
-            $("#change").on('click', function () {
-                $('#editMode2').css({
-                    'visibility': 'visible'
-                }
+        // $(function () {
+        //     $("#change").on('click', function () {
+        //         $('#editMode2').css({
+        //             'visibility': 'visible'
+        //         }
+        //         );
 
-                );
+                
 
+        //         $('#editMode4').css({
+        //             'visibility': 'visible'
+        //         }
 
-                $('#editMode4').css({
-                    'visibility': 'visible'
-                }
-
-                );
-            });
-        });
+        //         );
+        //     });
+        // });
 
