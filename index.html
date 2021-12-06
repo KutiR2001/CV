@@ -60,11 +60,36 @@
 
         }
 
+        .editButton{
+            width: 40px;
+            height: 40px;
+            background: url(edit.png);
+            background-repeat: no-repeat;
+            background-size: 30px 30px;
+            background-position: center;
+            border-radius: 4px;
+            background-color: grey;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            visibility: hidden;
+
+
+        }
+
+
         .editor{
             position: fixed;
-            top: 0px;
             background-color: red;
             visibility: hidden;
+            left: 0px;
+            bottom: 0px;
+
+        }
+
+
+        .rela{
+            position: relative;
         }
 
 
@@ -81,7 +106,7 @@
 
     <div class="editor" id="editMode">
         
-        <h1>Editor Mode</h1>
+        <p>Editor Mode</p>
 
 
     </div>
@@ -91,11 +116,25 @@
         <div class="row px-2 mt-3">
             <div class="col-10 col-sm-10 col-md-3 px-1 mx-auto bg-primary b-rad-1">
                 <div class="p-2 m-2">
-                    <img src="random.jpeg" style="width: 100%" class="b-rad-2 ">
+                   
+                   
+                    <div class="rela">
+                        <img src="random.jpeg" class="b-rad-2 col-12">
+
+                        <button class="editButton" id="editMode2"></button>
+                        
+                    
+                    </div>
+
+
+                    <div class="rela">
+                        <h2 class="name col-12"> Ahmed Ramadan</h2>
+                        <button class="editButton" id="editMode3"></button>
+                    
+                    </div>
 
                     <div class="row">
 
-                        <h2 class="name col-12"> Ahmed Ramadan</h2>
 
 
                         <div class="col-6 ps-md-1 ps-5">
@@ -113,7 +152,7 @@
 
 
 
-                        <a class="buttonLink col-6  mx-auto mb-2" href="#aboutme">
+                        <!-- <a class="buttonLink col-6  mx-auto mb-2" href="#aboutme">
                             About Me
                         </a>
                         
@@ -122,18 +161,14 @@
 
                         </div>
 
-
-
-
-
                         <a class="buttonLink col-3 mx-auto">
                             Resume
                         </a>
                         <a class="buttonLink col-3  mx-auto">
                             Contact
-                        </a>
+                        </a> -->
                         <!-- TODO: add Functionality -->
-                        <a href="./aboutMe.html" class="col-12  mx-auto">DOWNLOAD RESUME</a>
+                        <!-- <a href="./aboutMe.html" class="col-12  mx-auto">DOWNLOAD RESUME</a> -->
                     </div>
 
                 </div>
@@ -225,7 +260,6 @@
 
     <!-- <img src="edit.png" class="floatingButton" >     -->
 
-<p id="show"> me</p>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -251,10 +285,18 @@
                 }
 
                 );
+                $('#editMode2').css({
+                    'visibility': 'visible'
+                }
+
+                );
+
+                $('#editMode3').css({
+                    'visibility': 'visible'
+                }
+
+                );
             });
-
-
-
         });
 
 
