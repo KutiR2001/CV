@@ -326,9 +326,23 @@ function submitOnChange() {
 
     function addBullet() {
       console.log("ayy 7aga");
+      i+=1;
+      var inputBullet = '<input type="text" id="newInput' + i + '">'
+      var headlineBullet ='<input type="text" id="newHeadline' + i + '" class="bold">'  ;
+      var deleteBullet = '<button id="delete' + i + '" onclick="deleteInput(1)"> Delete </button>' ;
+    
 
-      $("#newInputType").append('<input type="text" id="newInput1" style="visibility: hidden;">');
+      $("#newInputType").append(inputBullet);
+      $("#newHeadlineType").append(headlineBullet);
+      $("#newDeleteType").append(deleteBullet);
+
+        console.log(i)
+      
+      
+      
     }
+
+
 
     // $("#add-button").on('click',addBullet);
 
