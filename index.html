@@ -137,9 +137,9 @@
                     <form action="" id="formId">
                     <h3 class="ta-c">Personal Info</h3>
                     <button id="addInputBox">Add box</button>
-                    <button id="deleteInputBox">Add box</button>
+                    <button onclick="addBullet()">ADD NEW</button>
                     <div class="row pb-1">
-                        <div class="col-6">
+                        <div class="col-5">
                             
                             <div class="bold pb-2">Name:</div>
                             <div class="bold pb-2">Birthday:</div>
@@ -155,7 +155,7 @@
 
 
                         </div>
-                        <div class="col-6">
+                        <div class="col-5">
                             <input type="text" id="nameModal" value="">
 
                             <!-- Trying to make birthdate flexible -->
@@ -170,17 +170,29 @@
                             </div> -->
                                 <input type="number" min="1" max="31" id="bDayModal" class="col-3" value="">
                                 <input type="number" min="1" max="12" id="bMonthModal" class="col-3" value="">
-                                <input type="number" min="1945" max="2005" id="bYearModal" class="col-4" value="">
+                                <input type="number" min="1945" max="2005" id="bYearModal" class="col-5" value="">
                             <!-- <input type="date" required id="birthdayModal" value=""> -->
                             <input type="text" id="pobModal" value="">
                             <input type="text" id="nationModal" value="">
-                            
+                            <div id="newInputType">
+
+                            </div>
+
                             <input type="text" id="newInput1" style="visibility: hidden;">
                             <input type="text" id="newInput2" style="visibility: hidden;">
                             <input type="text" id="newInput3" style="visibility: hidden;">
                             <input type="text" id="newInput4" style="visibility: hidden;">
 
                         </div>
+
+                        <div class="col-1">
+                            <div class="col-12 pb-5"></div><div class="col-12 pb-5"></div><div class="col-12 pb-4"></div>
+                            <button id="delete1" style="visibility: hidden;" onclick="deleteInput(1)"> Delete </button>
+                            <button id="delete2" style="visibility: hidden;" onclick="deleteInput(2)"> Delete </button>
+                            <button id="delete3" style="visibility: hidden;" onclick="deleteInput(3)"> Delete </button>
+                            <button id="delete4" style="visibility: hidden;" onclick="deleteInput(4)"> Delete </button>
+                        </div>
+
                     </div>
                     <h3 class="ta-c">Academic</h3>
 

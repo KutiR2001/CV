@@ -155,40 +155,113 @@ function checkSubmitted() {
 
 // function addInputBox() {
 
+    var i = 0;
+
 
 // ADDING INPUT BOX
-    $(function () {
-        var i = 0;
-        
-        $("#addInputBox").on('click', function () {
+$(function () {
+
+    $("#addInputBox").on('click', function () {
+        if(i < 4){
             i += 1;
-            console.log(i);
-            var inputThing = "#newInput" + i;
-            var headlineThing = "#newHeadline" + i;
-            console.log(inputThing);
-
-
-            $(inputThing).css({
-                visibility: 'visible'
-            }
-            );
-
-
-            $(headlineThing).css({
-                visibility: 'visible'
-            }
-            );
-
-
         }
+        
+        
 
+
+        console.log("add"+i);
+        var inputThing = "#newInput" + i;
+        var headlineThing = "#newHeadline" + i;
+        var deleteThing = "#delete" + i;
+        console.log(inputThing);
+
+
+        $(inputThing).css({
+            visibility: 'visible'
+        }
         );
 
-    });
+
+        $(headlineThing).css({
+            visibility: 'visible'
+        }
+        );
+
+        $(deleteThing).css({
+            visibility: 'visible'
+        }
+        );
+
+    }
+
+    );
+
+});
 
 
 
 //DELETING INPUT BOX
+function deleteInput(parameter) {
+    var deleteLastButton = "#delete"+i;
+    var deleteLastInput = "#newInput"+i;
+    var deleteLastHeadline = "#newHeadline"+i
+
+    if(i != 0){
+    i-=1;
+    }
+    
+    $(deleteLastButton).css({
+        visibility: 'hidden'
+    }
+    );
+
+    $(deleteLastInput).css({
+        visibility: 'hidden'
+    }
+    );
+
+    $(deleteLastHeadline).css({
+        visibility: 'hidden'
+    }
+    );
+
+    wipeData(parameter);
+}
+    
+
+function wipeData(param){
+
+
+}
+
+
+    // $(deleteThing).on('click', function () {
+    //     console.log("works");
+        
+    //     // $(inputThing).css({
+    //     //     visibility: 'hidden'
+    //     // }
+    //     // );
+
+
+    //     // $(headlineThing).css({
+    //     //     visibility: 'hidden'
+    //     // }
+    //     // );
+
+    //     $('#delete4').css({
+    //         visibility: 'hidden'
+    //     }
+    //     );
+
+    // }
+
+    // );
+
+
+
+
+
 
 
 
@@ -249,4 +322,13 @@ function submitOnChange() {
         //     // });
         // });
 
+
+
+    function addBullet() {
+      console.log("ayy 7aga");
+
+      $("#newInputType").append('<input type="text" id="newInput1" style="visibility: hidden;">');
+    }
+
+    // $("#add-button").on('click',addBullet);
 
