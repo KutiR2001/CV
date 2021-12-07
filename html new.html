@@ -20,3 +20,36 @@ function saveChanges() {
   document.getElementById("nationSaved").innerHTML = name;
 
 }
+
+
+
+
+
+
+function deleteInput(param) {
+  // var deleteLastButton = "#delete"+i;
+  // var deleteLastInput = "#newInput"+i;
+  // var deleteLastHeadline = "#newHeadline"+i;
+  
+  var deleteLastButtonID = "delete"+ param;
+  var deleteLastInputID = "newInput"+ param;
+  var deleteLastHeadlineID = "newHeadline"+param;
+
+  var LastButtonL = document.getElementById(deleteLastButtonID);
+  var LastInputL = document.getElementById(deleteLastInputID);
+  var LastHeadlineL = document.getElementById(deleteLastHeadlineID);
+
+
+  i-=1;
+
+  console.log(i);
+  
+  wipeData(LastButtonL, LastInputL, LastHeadlineL);
+}
+  
+
+function wipeData(button, input, head){
+      button.remove();
+      input.remove();
+      head.remove();
+}

@@ -159,56 +159,54 @@ function checkSubmitted() {
 
 
 // ADDING INPUT BOX
-$(function () {
+// $(function () {
 
-    $("#addInputBox").on('click', function () {
-        if(i < 4){
-            i += 1;
-        }
+//     $("#addInputBox").on('click', function () {
+//             i += 1;
         
         
 
 
-        console.log("add"+i);
-        var inputThing = "#newInput" + i;
-        var headlineThing = "#newHeadline" + i;
-        var deleteThing = "#delete" + i;
-        console.log(inputThing);
+//         console.log("add"+i);
+//         var inputThing = "#newInput" + i;
+//         var headlineThing = "#newHeadline" + i;
+//         var deleteThing = "#delete" + i;
+//         console.log(inputThing);
 
 
-        $(inputThing).css({
-            visibility: 'visible'
-        }
-        );
+//         $(inputThing).css({
+//             visibility: 'visible'
+//         }
+//         );
 
 
-        $(headlineThing).css({
-            visibility: 'visible'
-        }
-        );
+//         $(headlineThing).css({
+//             visibility: 'visible'
+//         }
+//         );
 
-        $(deleteThing).css({
-            visibility: 'visible'
-        }
-        );
+//         $(deleteThing).css({
+//             visibility: 'visible'
+//         }
+//         );
 
-    }
+//     }
 
-    );
+//     );
 
-});
+// });
 
 
 
 //DELETING INPUT BOX
-function deleteInput() {
+function deleteInput(param) {
     // var deleteLastButton = "#delete"+i;
     // var deleteLastInput = "#newInput"+i;
     // var deleteLastHeadline = "#newHeadline"+i;
     
-    var deleteLastButtonID = "delete"+i;
-    var deleteLastInputID = "newInput"+i;
-    var deleteLastHeadlineID = "newHeadline"+i;
+    var deleteLastButtonID = "delete"+ param;
+    var deleteLastInputID = "newInput"+ param;
+    var deleteLastHeadlineID = "newHeadline"+param;
 
     var LastButtonL = document.getElementById(deleteLastButtonID);
     var LastInputL = document.getElementById(deleteLastInputID);
@@ -217,42 +215,17 @@ function deleteInput() {
 
     i-=1;
 
-
-    // var LastHeadlineL = document.getElementById("aboutmeSaved");
-    LastHeadlineL.remove();
-    LastButtonL.remove();
-    LastInputL.remove();
-
-
-    // LastButtonL.remove();
-    // LastInputL.remove();
-    // LastHeadlineL.remove();
-
     console.log(i);
     
-    // $(deleteLastButton).css({
-    //     display: "none"
-    // }
-    // );
-
-    // $(deleteLastInput).css({
-    //     display: 'none'
-    // }
-    // );
-
-    // $(deleteLastHeadline).css({
-    //     display: 'none'
-    // }
-    // );
-
-    // // wipeData(parameter);
+    wipeData(LastButtonL, LastInputL, LastHeadlineL);
 }
     
 
-// function wipeData(param){
-
-
-// }
+function wipeData(button, input, head){
+        button.remove();
+        input.remove();
+        head.remove();
+}
 
 
     // $(deleteThing).on('click', function () {
@@ -278,15 +251,10 @@ function deleteInput() {
 
     // );
 
-
-
-
-
-
-
-
-
 // }
+
+
+
 
 
 
@@ -348,7 +316,7 @@ function submitOnChange() {
         i+=1;
         var inputBullet = '<input type="text" id="newInput' + i + '">'
       var headlineBullet ='<input type="text" id="newHeadline' + i + '" class="bold">'  ;
-      var deleteBullet = '<button id="delete' + i + '" onclick="deleteInput()"> Delete </button>' ;
+      var deleteBullet = '<button id="delete' + i + '" onclick="deleteInput(' + i + ')"> Delete </button>' ;
       
 
       $("#newInputType").append(inputBullet);
@@ -359,6 +327,23 @@ function submitOnChange() {
       
       
       
+    }
+
+    function populateArea(){
+
+        // <div class="bold pb-2">IT WORKS</div>
+
+        var ind = i;
+
+        while(ind != 0){
+            console.log("ind" + ind);
+            console.log("i:" + i);
+            ind--;
+        }
+
+
+        $("#populateHeadlines").append('');
+
     }
 
 
