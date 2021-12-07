@@ -1,13 +1,13 @@
-let object = {
-    JaboutMe: "drerit nisl, vitae consectetur quam. Nunc id metus in quam convallis fringilla. Duis cursus ex sed odio feugiat, sit amet sagittis leo tristique. Maecenas viverra eu est ut accumsan. Vivamus nec laoreet ex. In aliquet massa nulla, eu bibendum est sodales quis. Cras condimentum fermentum felis, pharetra rutrum enim luctus at. Praesent elementum bibendum sagittis. Integer accumsan odio magna, quis faucibus erat lobortis ac.",
-    Jname: "7amada",
-    JbirthDay: "2001-10-15",
-    JbDay: "26",
-    JbMonth: "01",
-    JbYear: "2001",
-    JplaceOfBirth: "Caidfro",
-    Jnationality: "dc",
-}
+let object = getData();
+
+
+// function buttonN(){
+
+
+
+// }
+
+
 initOnLoad();
 
 // TODO
@@ -145,8 +145,7 @@ submitOnChange();
 
 function checkSubmitted() {
 
-    // for()
-
+   //
 
 
 }
@@ -159,50 +158,11 @@ function checkSubmitted() {
 
 
 // ADDING INPUT BOX
-// $(function () {
-
-//     $("#addInputBox").on('click', function () {
-//             i += 1;
-        
-        
-
-
-//         console.log("add"+i);
-//         var inputThing = "#newInput" + i;
-//         var headlineThing = "#newHeadline" + i;
-//         var deleteThing = "#delete" + i;
-//         console.log(inputThing);
-
-
-//         $(inputThing).css({
-//             visibility: 'visible'
-//         }
-//         );
-
-
-//         $(headlineThing).css({
-//             visibility: 'visible'
-//         }
-//         );
-
-//         $(deleteThing).css({
-//             visibility: 'visible'
-//         }
-//         );
-
-//     }
-
-//     );
-
-// });
-
 
 
 //DELETING INPUT BOX
 function deleteInput(param) {
-    // var deleteLastButton = "#delete"+i;
-    // var deleteLastInput = "#newInput"+i;
-    // var deleteLastHeadline = "#newHeadline"+i;
+
     
     var deleteLastButtonID = "delete"+ param;
     var deleteLastInputID = "newInput"+ param;
@@ -215,16 +175,84 @@ function deleteInput(param) {
 
     i-=1;
 
-    console.log(i);
+    // console.log(i);
     
     wipeData(LastButtonL, LastInputL, LastHeadlineL);
+    changeOtherIDs(param);
+
+
 }
     
 
 function wipeData(button, input, head){
+        // console.log(button);
+        // console.log(input);
+        // console.log(head);
         button.remove();
         input.remove();
         head.remove();
+}
+
+function changeOtherIDs(parameter){
+
+    var index = i-parameter + 1 ;
+    var notIndex;
+
+    // console.log(index + "index");
+    // console.log(i);
+    // console.log(parameter);
+
+    // console.log("this still works");
+
+
+
+    while(index != 0){
+        var changeLastButtonID = "delete"+ (parameter);
+        var changeLastInputID = "newInput"+ (parameter);
+        var changeHeadlineID = "newHeadline"+ (parameter);
+
+        // var changeOnClick = "newHeadline"+ (parameter);
+
+
+        var paramPlusOne = parameter + 1;
+
+        var whichButtonID = "delete"+(paramPlusOne);
+        var whichInputID = "newInput"+(paramPlusOne);
+        var whichHeadlineID = "newHeadline"+ (paramPlusOne);
+
+
+       
+        
+
+        var deleteInputType ="deleteInput("+ parameter +")"
+
+        document.getElementById(whichButtonID).setAttribute('onclick', deleteInputType);
+
+        document.getElementById(whichButtonID).id = changeLastButtonID;
+
+        document.getElementById(whichInputID).id = changeLastInputID;
+
+
+        document.getElementById(whichHeadlineID).id = changeHeadlineID;
+
+        // document.getElementById(whichButtonID).onclick = ;
+
+        // console.log(changeLastButtonID);
+        // console.log(changeLastInputID);
+
+
+        index--;
+        parameter++;
+    }
+
+    i--;
+        // document.getElementById().id;
+
+        // console.log(changeLastButtonID);
+        // console.log(changeLastInputID);
+    // } 
+
+
 }
 
 
@@ -282,7 +310,7 @@ function submitOnChange() {
 
 
 
-                console.log(valueChange);
+                // console.log(valueChange);
 
 
             });
@@ -316,14 +344,14 @@ function submitOnChange() {
         i+=1;
         var inputBullet = '<input type="text" id="newInput' + i + '">'
       var headlineBullet ='<input type="text" id="newHeadline' + i + '" class="bold">'  ;
-      var deleteBullet = '<button id="delete' + i + '" onclick="deleteInput(' + i + ')"> Delete </button>' ;
+      var deleteBullet = '<button id="delete' + i + '"type="button" onclick="deleteInput(' + i + ')"> Delete </button>' ;
       
 
       $("#newInputType").append(inputBullet);
       $("#newHeadlineType").append(headlineBullet);
       $("#newDeleteType").append(deleteBullet);
 
-        console.log(i)
+        // console.log(i)
       
       
       
@@ -336,9 +364,21 @@ function submitOnChange() {
         var ind = i;
 
         while(ind != 0){
-            console.log("ind" + ind);
-            console.log("i:" + i);
+            // if(getInput = ){
+
+            // }            
+
+            var getInput;
+            var getHeadline;
+            
+            
+            // console.log("ind" + ind);
+            // console.log("i:" + i);
+            
+            
+            
             ind--;
+
         }
 
 
