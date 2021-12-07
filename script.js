@@ -201,38 +201,58 @@ $(function () {
 
 
 //DELETING INPUT BOX
-function deleteInput(parameter) {
-    var deleteLastButton = "#delete"+i;
-    var deleteLastInput = "#newInput"+i;
-    var deleteLastHeadline = "#newHeadline"+i
+function deleteInput() {
+    // var deleteLastButton = "#delete"+i;
+    // var deleteLastInput = "#newInput"+i;
+    // var deleteLastHeadline = "#newHeadline"+i;
+    
+    var deleteLastButtonID = "delete"+i;
+    var deleteLastInputID = "newInput"+i;
+    var deleteLastHeadlineID = "newHeadline"+i;
 
-    if(i != 0){
+    var LastButtonL = document.getElementById(deleteLastButtonID);
+    var LastInputL = document.getElementById(deleteLastInputID);
+    var LastHeadlineL = document.getElementById(deleteLastHeadlineID);
+
+
     i-=1;
-    }
+
+
+    // var LastHeadlineL = document.getElementById("aboutmeSaved");
+    LastHeadlineL.remove();
+    LastButtonL.remove();
+    LastInputL.remove();
+
+
+    // LastButtonL.remove();
+    // LastInputL.remove();
+    // LastHeadlineL.remove();
+
+    console.log(i);
     
-    $(deleteLastButton).css({
-        visibility: 'hidden'
-    }
-    );
+    // $(deleteLastButton).css({
+    //     display: "none"
+    // }
+    // );
 
-    $(deleteLastInput).css({
-        visibility: 'hidden'
-    }
-    );
+    // $(deleteLastInput).css({
+    //     display: 'none'
+    // }
+    // );
 
-    $(deleteLastHeadline).css({
-        visibility: 'hidden'
-    }
-    );
+    // $(deleteLastHeadline).css({
+    //     display: 'none'
+    // }
+    // );
 
-    wipeData(parameter);
+    // // wipeData(parameter);
 }
     
 
-function wipeData(param){
+// function wipeData(param){
 
 
-}
+// }
 
 
     // $(deleteThing).on('click', function () {
@@ -325,12 +345,11 @@ function submitOnChange() {
 
 
     function addBullet() {
-      console.log("ayy 7aga");
-      i+=1;
-      var inputBullet = '<input type="text" id="newInput' + i + '">'
+        i+=1;
+        var inputBullet = '<input type="text" id="newInput' + i + '">'
       var headlineBullet ='<input type="text" id="newHeadline' + i + '" class="bold">'  ;
-      var deleteBullet = '<button id="delete' + i + '" onclick="deleteInput(1)"> Delete </button>' ;
-    
+      var deleteBullet = '<button id="delete' + i + '" onclick="deleteInput()"> Delete </button>' ;
+      
 
       $("#newInputType").append(inputBullet);
       $("#newHeadlineType").append(headlineBullet);
