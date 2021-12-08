@@ -15,6 +15,12 @@
     <link href="Style.css" rel="stylesheet">
 
 </head>
+
+<div id="resume"></div>
+
+
+
+
 <div class="container-fluid">
     <div class="row px-2 mt-3">
         <div class="col-10 col-sm-10 col-md-3 px-1 mx-auto bg-primary b-rad-1 rela">
@@ -146,9 +152,19 @@
 
 
                 <!-- <div id="form" style="background-color: yellow;"> -->
-                    <!-- <div class="d-flex justify-content-center"><input type="text" class="ta-c bold col-6"></div> -->
+                <!-- <div class="d-flex justify-content-center"><input type="text" class="ta-c bold col-6"></div> -->
 
-                    <div class="row pb-1"><div class="col-5"><div id="newHeadlineType"></div></div><div class="col-5"><div id="newInputType"></div></div><div class="col-1"><div id="newDeleteType"></div></div></div>
+                <div class="row pb-1">
+                    <div class="col-5">
+                        <div id="newHeadlineType"></div>
+                    </div>
+                    <div class="col-5">
+                        <div id="newInputType"></div>
+                    </div>
+                    <div class="col-1">
+                        <div id="newDeleteType"></div>
+                    </div>
+                </div>
 
 
 
@@ -158,8 +174,9 @@
 
                 <h3 class="ta-c">Personal Info</h3>
                 <button type="button" onclick="populateArea()">SAVE CHANGES</button>
-                <button type="button" onclick="addBullet()">ADD NEW</button>
+                <button type="button" onclick="createNewResume()">ADD NEW</button>
                 <button type="button" onclick="addFormArea()">ADD Form</button>
+                <button type="button" class="btn btn-primary"onclick="saveEverything()">Pop</button>
 
 
                 <div class="row pb-1">
@@ -234,7 +251,8 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="obj.js"></script>
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
+<script src="clean code.js"></script>
 
 </body>
 

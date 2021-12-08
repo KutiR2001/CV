@@ -42,29 +42,6 @@ function initModal() {
 }
 
 
-function saveChanges() {
-    var name = document.getElementById("aboutmeModal").value;
-    document.getElementById("aboutmeSaved").innerHTML = name;
-
-    var name = document.getElementById("nameModal").value;
-    document.getElementById("nameSaved").innerHTML = name;
-    document.getElementById("nameShown").innerHTML = name;
-
-    var dayNew = document.getElementById("bDayModal").value;
-    var monthNew = document.getElementById("bMonthModal").value;
-    var yearNew = document.getElementById("bYearModal").value;
-
-    addDate(dayNew, monthNew, yearNew);
-    ageCalculcator(dayNew, monthNew, yearNew);
-
-    var name = document.getElementById("pobModal").value;
-    document.getElementById("pobSaved").innerHTML = name;
-
-    var name = document.getElementById("nationModal").value;
-    document.getElementById("nationSaved").innerHTML = name;
-
-}
-
 function addDate(dayParam, monthParam, yearParam) {
     if ((monthParam == 2 || monthParam == 4 || monthParam == 6 || monthParam == 9 || monthParam == 11) && dayParam == 31) {
         invalid();
@@ -121,121 +98,6 @@ function invalid() {
 
 
 
-var i = 0;
-
-
-function addBullet() {
-    i += 1;
-    var inputBullet = '<input type="text" id="newInput' + i + '">'
-    var headlineBullet = '<input type="text" id="newHeadline' + i + '" class="bold">';
-    var deleteBullet = '<button id="delete' + i + '"type="button" onclick="deleteInput(' + i + ')"> Delete </button>';
-
-
-    $("#newInputType").append(inputBullet);
-    $("#newHeadlineType").append(headlineBullet);
-    $("#newDeleteType").append(deleteBullet);
-
-    console.log("addB: " + i)
-}
-
-
-
-//DELETING INPUT BOX
-function deleteInput(param) {
-
-    var deleteLastButtonID = "delete" + param;
-    var deleteLastInputID = "newInput" + param;
-    var deleteLastHeadlineID = "newHeadline" + param;
-
-    var LastButtonL = document.getElementById(deleteLastButtonID);
-    var LastInputL = document.getElementById(deleteLastInputID);
-    var LastHeadlineL = document.getElementById(deleteLastHeadlineID);
-
-
-    console.log("delete: " + i)
-
-    wipeData(LastButtonL, LastInputL, LastHeadlineL);
-    console.log("wipe: " + i)
-
-
-}
-
-
-function wipeData(button, input, head) {
-
-    button.remove();
-    input.remove();
-    head.remove();
-}
-
-
-
-function changeOtherIDs(parameter) {
-    if (parameter = i) {
-        //Do Nothing
-    } else {
-        var index = i - parameter + 1;
-        var notIndex;
-
-
-        while (index != 0) {
-            var changeLastButtonID = "delete" + (parameter);
-            var changeLastInputID = "newInput" + (parameter);
-            var changeHeadlineID = "newHeadline" + (parameter);
-
-            var paramPlusOne = parameter + 1;
-
-            var whichButtonID = "delete" + (paramPlusOne);
-            var whichInputID = "newInput" + (paramPlusOne);
-            var whichHeadlineID = "newHeadline" + (paramPlusOne);
-
-            var deleteInputType = "deleteInput(" + parameter + ")"
-
-            document.getElementById(whichButtonID).setAttribute('onclick', deleteInputType);
-
-            document.getElementById(whichButtonID).id = changeLastButtonID;
-
-            document.getElementById(whichInputID).id = changeLastInputID;
-
-            document.getElementById(whichHeadlineID).id = changeHeadlineID;
-
-
-            index--;
-            parameter++;
-        }
-    }
-
-}
-
-
-
-function submitOnChange() {
-    $(function () {
-        $('#toBeChanged1').addClass('bold');
-        $("#formId input[type=text]")
-            .each(function () {
-                var idCHange = this.id;
-
-                var valueChange = document.getElementById(idCHange).value;
-
-                if (valueChange == null) {
-                    alert("whhha");
-                };
-
-            });
-
-
-
-
-    });
-
-
-
-}
-
-
-
-
 function populateArea() {
     checkHeadlineValuesAddInResume();
     checkInputValuesAddInResume();
@@ -261,7 +123,6 @@ function checkHeadlineValuesAddInResume() {
     }
 
 }
-
 
 
 function addHeadlineInResume(headline) {
@@ -295,7 +156,7 @@ function checkInputValuesAddInResume() {
 
 function addInputInResume(inp) {
 
-    console.log(inp)
+
     let inpValue = inp.value;
     let divInput = ' <div class="pb-2">' + inpValue + '</div>'
     $("#populateInput").append(divInput);
@@ -304,40 +165,55 @@ function addInputInResume(inp) {
 }
 
 
+
+
+//ADDS AREA FOR FORM 
+
 var j = 1;
-
-
 
 function addFormArea() {
 
-    let formDiv = '<div id="form' + j + '" style="background-color: yellow;"></div'
-    $("#formArea").append(formDiv);
+    // HTML OF FORM DIV 
+    addFormDiv();
 
-    let currentFormID = "#form" + j;
-
-    let titleInput = '<div class="d-flex justify-content-center"><input type="text" id="titleInput' + (f - 1) + '" class="ta-c bold col-6"></div>'
-
-    $(currentFormID).append(titleInput);
-
-    $(currentFormID).append('<div class="row pb-1"><div class="col-5"><div id="newHeadlineType' + j + '"></div></div><div class="col-5"><div id="newInputType' + j + '"></div></div><div class="col-1"><div id="newDeleteType' + j + '"></div></div></div>');
+    // HTML OF ALL INPUT AND '+' BUTTON
+    addAllInput();
 
     // ADDING 4 ELEMENTS IN THE BEGINNING
-    for (let index = 0; index < 4; index++) {
-        addFormBullet(j);
-
-    }
-
-    let addButton = '<button type="button" onclick="addFormBullet(' + j + ')">ADD Forckjsdn,m</button>'
-    $(currentFormID).append(addButton);
+    addFourInputs();
 
     // appendResume();
 
     j++;
 }
 
+
+function addFormDiv(){
+    let formDiv = '<div id="form' + j + '" style="background-color: yellow;"></div'
+    $("#formArea").append(formDiv);
+}
+
+function addAllInput(){
+    let currentFormID = "#form" + j;
+    let titleInput = '<div class="d-flex justify-content-center"><input type="text" id="titleInput' + j + '" class="ta-c bold col-6"></div>'
+    $(currentFormID).append(titleInput);
+    $(currentFormID).append('<div class="row pb-1"><div class="col-5"><div id="newHeadlineType' + j + '"></div></div><div class="col-5"><div id="newInputType' + j + '"></div></div><div class="col-1"><div id="newDeleteType' + j + '"></div></div></div>');
+    let addButton = '<button type="button" onclick="addFormBullet(' + j + ')">ADD Forckjsdn,m</button>'
+    $(currentFormID).append(addButton);
+}
+
+function addFourInputs(){
+    for (let index = 0; index < 4; index++) {
+        addFormBullet(j);
+    }
+}
+
+
+
+
+// ADDS FORM INPUTS
+
 var l = 1;
-
-
 
 function addFormBullet(param) {
     var inputBullet = '<input type="text" id="newInput' + l + '">'
@@ -356,94 +232,32 @@ function addFormBullet(param) {
 
 
 
+//DELETING INPUT BOX
+function deleteInput(param) {
+
+    var deleteLastButtonID = "delete" + param;
+    var deleteLastInputID = "newInput" + param;
+    var deleteLastHeadlineID = "newHeadline" + param;
+
+    var LastButtonL = document.getElementById(deleteLastButtonID);
+    var LastInputL = document.getElementById(deleteLastInputID);
+    var LastHeadlineL = document.getElementById(deleteLastHeadlineID);
+    
+    wipeData(LastButtonL, LastInputL, LastHeadlineL);
+}
+
+
+function wipeData(button, input, head) {
+    button.remove();
+    input.remove();
+    head.remove();
+}
 
 
 
-
-
-// MAKING SUBMIT AREA
-// function populateResume(){
-//     addExtraDivs();
-
-// }
-
-
-
-
-// function populateArea() {
-//     checkHeadlineValuesAddInResume();
-//     checkInputValuesAddInResume();
-// }
-
-
-// function checkHeadlineValuesAddInResume(){
-//     const listedHeadlineValues = [];
-
-//     $("#newHeadlineType").children().each(function(child){
-//         listedHeadlineValues.push(this.value);
-//     });
-
-//     if(listedHeadlineValues.includes("")){
-//         alert("ayoL");
-//     } else{
-//         $("#newHeadlineType").children().each(function(child){
-
-//             addHeadlineInResume(this);
-
-//         })
-
-//     }
-
-// }
-
-
-
-// function addHeadlineInResume(headline){
-//     console.log(headline)
-//     let headlineValue = headline.value;
-//         let divHeadline = ' <div class="bold pb-2">'+ headlineValue+'</div>'
-//         $("#populateHeadlines").append(divHeadline);
-
-
-// }
-
-
-// function checkInputValuesAddInResume(){
-//     const listedInputValues = [];
-
-//     $("#newInputType").children().each(function(child){
-//         listedInputValues.push(this.value);
-//     });
-
-//     if(listedInputValues.includes("")){
-//         alert("ayoL");
-//     } else{
-//         $("#newInputType").children().each(function(child){
-
-//             addInputInResume(this);
-
-//         })
-
-//     }
-
-// }
-
-// function addInputInResume(inp){
-
-//     console.log(inp)
-//     let inpValue = inp.value;
-//         let divInput = ' <div class="pb-2">'+ inpValue+'</div>'
-//         $("#populateInput").append(divInput);
-
-
-// }
 
 
 // SUBMIT STARTS HERE
-
-
-
-
 
 var f = 1;
 function removeEverything(){
@@ -457,7 +271,6 @@ function saveEverything(){
 
     $("#formArea").children().each(function (child) {
         // addHeadlineInResume(this);
-        console.log(this.id);
         seperateValues(this.id, f);
 
 
@@ -471,7 +284,7 @@ function saveEverything(){
 function appendResume() {
     // removeEverything();
 
-    $('#resumeInfo').append('<div id="filledForm' + f + '" class="col-7 mx-auto"><h1 class="ta-c" id="titleResume' + f + '"></h1><div class="row pb-5"><div class="col-6"><div id="populateHeadlines' + f + '"></div></div><div class="col-6"><div id="populateInput' + f + '"></div></div></div></div>')
+    $('#resumeInfo').append('<div id="filledForm' + f + '" class="col-7 mx-auto"> <div id="populateTitle"' + f + '"</div><div class="row pb-5"><div class="col-6"><div id="populateHeadlines' + f + '"></div></div><div class="col-6"><div id="populateInput' + f + '"></div></div></div></div>')
 
 
     // $("#formArea").children().each(function (child) {
@@ -501,9 +314,6 @@ function seperateValues(idOfForm, globalVar) {
 
 function printValues(idOfInputs, globalVar) {
     var slicedID = idOfInputs.slice(0, 7);
-
-    console.log(idOfInputs);
-    console.log(slicedID);
 
     if (slicedID == "newHead") {
         printHeadline(idOfInputs, globalVar);
@@ -550,3 +360,116 @@ function printTitle(param,globalVar) {
 
 
  
+// function submitOnChange() {
+//     $(function () {
+//         $('#toBeChanged1').addClass('bold');
+//         $("#formId input[type=text]")
+//             .each(function () {
+//                 var idCHange = this.id;
+//                 var valueChange = document.getElementById(idCHange).value;
+//                 if (valueChange == null) {
+//                     alert("whhha");
+//                 };
+//             });
+//     });
+// }
+
+
+///SUMBIT////// AKHIRANNNN////
+
+
+// 1. Create New Resume 
+function checkEmptiness(){
+
+}
+
+
+function createNewResume(){
+        if( $('#resume').is(':empty') ){
+            console.log('hhasd');
+            var resumeHtml = '<div id="resumeInfo" class="col-10 col-sm-10 col-md-8 col-lg-8 mx-auto bg-primary mt-2 mt-sm-2 mt-md-0 b-rad-2 rela">h</div>'
+            $('#resume').append(resumeHtml);
+            getEachChildInForm();
+        }else{
+            $('#resumeInfo').remove();
+            console.log('hhasd');
+            var resumeHtml = '<div id="resumeInfo" class="col-10 col-sm-10 col-md-8 col-lg-8 mx-auto bg-primary mt-2 mt-sm-2 mt-md-0 b-rad-2 rela">h</div>'
+            $('#resume').append(resumeHtml);
+            getEachChildInForm();
+        }
+
+}
+
+
+
+// 2. GET EACH CHILD OF FORMAREA
+var s = 1;
+function getEachChildInForm(){
+    $("#formArea").children().each(function (child) {
+        
+        getIDofElements(this.id, s);
+    })
+
+}
+
+
+// // 3. GET ELEMENTTYPE INPUT FROM CHILDREN
+function getIDofElements(formID, globalVar){
+
+    // <div id="populateTitle' + f + '</div>
+    
+
+
+    
+    $('#resumeInfo').append('<div id="filledForm' + s + '" class="col-7 mx-auto"><div id="populateTitle' + s + '"></div><div class="row pb-5"><div class="col-6"><div id="populateHeadlines' + s + '"></div></div><div class="col-6"><div id="populateInput' + s + '"></div></div></div></div>');
+    console.log(formID);
+    $('#' + formID + " input").each(function (child) {
+        checkWhichInputType(this.id, globalVar);
+    })
+    s++;
+}
+// // 4. CHECK WHICH INPUT TYPE
+
+function checkWhichInputType(idOfInputs, globalVar){
+var slicedID = idOfInputs.slice(0, 7);
+
+
+if (slicedID == "newHead") {
+    addHeadline(idOfInputs, globalVar);
+
+} else if (slicedID == "newInpu") {
+    addInput(idOfInputs, globalVar);
+} else {
+    addTitle(idOfInputs, globalVar);
+    
+}
+}
+
+
+// // 5. ADD IN RESUME BSP: HEADLINE
+function addHeadline(param, globalVar){
+
+    let headlineValue = document.getElementById(param).value;
+    let divHeadline = ' <div class="bold pb-2">' + headlineValue + ":"+ '</div>'
+    let headLineFinal = "#populateHeadlines" + globalVar;
+    
+    $(headLineFinal).append(divHeadline);
+    
+}
+
+function addInput(param, globalVar){
+    let inputValue = document.getElementById(param).value;
+    let divInput = ' <div class="pb-2">' + inputValue + '</div>'
+    let inputFinal = "#populateInput" + globalVar;
+    $(inputFinal).append(divInput);
+
+}
+
+function addTitle(param, globalVar){
+    console.log('yessir');
+    let titleValue = document.getElementById(param).value;
+    let divTitle = '<h1 class="ta-c">' + titleValue + '</h1>'
+    console.log(divTitle);
+    let titleFinal = "#populateTitle" + globalVar;
+    $(titleFinal).append(divTitle);
+}
