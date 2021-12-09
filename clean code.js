@@ -14,8 +14,6 @@ function initOnLoad() {
     document.getElementById("nationSaved").innerHTML = object.Jnationality;
 }
 
-
-
 initModal();
 
 function initModal() {
@@ -172,7 +170,7 @@ function addInputInResume(inp) {
 var j = 1;
 
 function addFormArea() {
-
+    
     // HTML OF FORM DIV 
     addFormDiv();
 
@@ -189,16 +187,16 @@ function addFormArea() {
 
 
 function addFormDiv(){
-    let formDiv = '<div id="form' + j + '" style="background-color: yellow;"></div'
+    let formDiv = '<div id="form' + j + '" class="form"><button type="button" class="btn-close" onclick="deleteFormArea('+j+')"></button></div'
     $("#formArea").append(formDiv);
 }
 
 function addAllInput(){
     let currentFormID = "#form" + j;
-    let titleInput = '<div class="d-flex justify-content-center"><input type="text" id="titleInput' + j + '" class="ta-c bold col-6"></div>'
+    let titleInput = '<div class="d-flex justify-content-center"><input type="text" placeholder="Title..." id="titleInput' + j + '" class="ta-c bold col-6 mb-2"></div>'
     $(currentFormID).append(titleInput);
-    $(currentFormID).append('<div class="row pb-1"><div class="col-5"><div id="newHeadlineType' + j + '"></div></div><div class="col-5"><div id="newInputType' + j + '"></div></div><div class="col-1"><div id="newDeleteType' + j + '"></div></div></div>');
-    let addButton = '<button type="button" onclick="addFormBullet(' + j + ')">ADD Forckjsdn,m</button>'
+    $(currentFormID).append('<div class="row pb-1"><div class="col-4 mx-auto"><div id="newHeadlineType' + j + '"></div></div><div class="col-4 mx-auto"><div id="newInputType' + j + '"></div></div><div class="col-1 mx-auto"><div id="newDeleteType' + j + '"></div></div></div>');
+    let addButton = '<button type="button" onclick="addFormBullet(' + j + ')">ADD Input</button>'
     $(currentFormID).append(addButton);
 }
 
@@ -216,9 +214,9 @@ function addFourInputs(){
 var l = 1;
 
 function addFormBullet(param) {
-    var inputBullet = '<input type="text" id="newInput' + l + '">'
-    var headlineBullet = '<input type="text" id="newHeadline' + l + '" class="bold">';
-    var deleteBullet = '<button id="delete' + l + '"type="button" onclick="deleteInput(' + l + ')"> Delete </button>';
+    var inputBullet = '<input type="text" class="my-1" placeholder="Text..." id="newInput' + l + '">'
+    var headlineBullet = '<input type="text" placeholder="Headline:" id="newHeadline' + l + '" class="bold my-1">';
+    var deleteBullet = '<button id="delete' + l + '"type="button" class="btn-close mb-3" onclick="deleteInput(' + l + ')"></button>';
     l++;
 
     var newInputTypeForm = '#newInputType' + param;
@@ -255,6 +253,11 @@ function wipeData(button, input, head) {
 
 
 
+function deleteFormArea(param){
+    let formAreaID = "#form" + param;
+    $(formAreaID).remove();
+}
+
 ///SUMBIT////// AKHIRANNNN////
 
 
@@ -264,10 +267,10 @@ function checkEmptiness(){
 }
 
 
-function createNewResume(){
+function saveResume(){
         if( $('#resume').is(':empty') ){
             console.log('hhasd');
-            var resumeHtml = '<div id="resumeInfo" class="col-10 col-sm-10 col-md-8 col-lg-8 mx-auto bg-primary mt-2 mt-sm-2 mt-md-0 b-rad-2 rela">h</div>'
+            var resumeHtml = '<div id="resumeInfo" class="col-10 col-sm-10 col-md-8 col-lg-8 mx-auto bg-primary mt-2 mt-sm-2 mt-md-0 b-rad-2 rela"></div>'
             $('#resume').append(resumeHtml);
             getEachChildInForm();
         }else{
