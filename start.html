@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Resume</title>
+
+    <link href="Style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7323eb76b3.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body class="modal-open" style="overflow: hidden; padding-right: 0px;">
+
+
+
+    
+    <!-- Modal -->
+    <div class="modal fade show " id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: block;" aria-modal="true" role="dialog">
+        <div class="modal-dialog col-md-8">
+            <div class="modal-content">
+                <!-- MODAL HEADER -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <!-- INSIDE MODAL -->
+                    <div id="basicForm" class="form">
+                        
+
+
+                        <h3 class="ta-c">Pick a Username!</h3>
+                        <div class="row pb-1">
+                            <!-- <div class="col-2 mx-auto my-auto"> -->
+                            <!-- <div class="bold pb-2">Username:</div> -->
+                            <!-- </div> -->
+                            <div class="col-9 mx-auto">
+                                <label class="col-5 bold" for="userID">Username:</label>
+                                <input type="text" class="my-1" placeholder="JohnDoe1" id="userID">
+                            </div>
+
+
+                        </div>
+                        <div class="row pb-1">
+                            <h4 class="ta-c">Let's create your Profile</h4>
+                            <!-- <div class="col-2 mx-auto my-auto"> -->
+                            <!-- <div class="bold pb-2">Name:</div>
+                                    <div class="bold pb-2">Email:</div>
+                                    <div class="bold pb-2">Phone:</div>
+                                    <div class="bold pb-2">Address:</div>
+                                                -->
+
+                            <!-- </div> -->
+                            <div class="col-9 mx-auto">
+                                <label class="col-5 bold" for="nameOfUser">Name:</label>
+                                <input type="text" class="my-1" placeholder="John Doe" id="nameOfUser">
+                                <label class="col-5 bold" for="email">Email:</label>
+                                <input type="text" class="my-1" placeholder="Johndoe@email.com" id="email">
+                                <label class="col-5 bold" for="phoneNumber">Phone Number:</label>
+                                <input type="text" class="my-1" placeholder="+20123457875" id="phoneNumber">
+                                <label class="col-5 bold" for="address">Address:</label>
+                                <input type="text" class="my-1" placeholder="879 W. Brook Road Glen Cove, NY 11542"
+                                    id="address">
+
+                                <label class="col-5 bold " for="lll">Picture:</label>
+                                <!-- <button>Choose Picture</button> -->
+                                <label id="lll" for="picture" class="buttonStyle my-1"
+                                    accept="image/png, image/jpeg">Choose Picture</label>
+                                <input type="file" style="display: none;" class="hidden" id="picture">
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+    
+    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="saveResume()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="obj.js"></script> -->
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="clean code.js"></script> -->
+    
+    <script>
+        // $("#modalForm").class('show');
+
+    
+    
+    </script>
+    
+    
+    
+    <div class="modal-backdrop fade show"></div></body>
+
+
+
+
+
+
+</html>
+
+
+
+

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Resume</title>
+
+    <link href="Style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7323eb76b3.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+
+<body class="modal-open" style="overflow: hidden; padding-right: 12px;">
+
+
+    <div class="container-fluid">
+        <div class="row px-2 mt-3">
+
+            <div class="h-25 d-inline-block col-10 col-sm-10 col-md-3 px-1 mx-auto b-rad-1 rela primaryCard">
+                <!-- <button class="editButton" id="editMode2"></button> -->
+
+                <div class="p-2 m-2">
+                    <img src="random.jpeg" class="b-rad-2 col-12">
+                    <h2 class="ta-c col-12" id="nameShown"> Ahmed Ramadan</h2>
+                    <div class="row">
+                        <div class="col-6 ps-md-1 ps-5">
+                            <div class="bold">Age:</div>
+                            <div class="bold">Location:</div>
+                            <div class="bold">Nationality:</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="right" id="age"></div>
+                            <div class="right">Germany</div>
+                            <div class="right">Egyptian</div>
+                        </div>
+                        <!-- <a class="buttonLink col-6  mx-auto mb-2" href="#aboutme">
+                                About Me
+                            </a>
+                            <div class="col-6">
+    
+                            </div>
+    
+                            <a class="buttonLink col-3 mx-auto">
+                                Resume
+                            </a>
+                            <a class="buttonLink col-3  mx-auto">
+                                Contact
+                            </a> -->
+                        <!-- TODO: add Functionality -->
+                        <!-- <a href="./aboutMe.html" class="col-12  mx-auto">DOWNLOAD RESUME</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-10 col-md-8 col-lg-8 mx-auto py-4 mt-2 mt-sm-2 mt-md-0 b-rad-2 rela primaryCard">
+
+                <div id="resume">
+                    <div id="resumeInfo">
+                        <div id="filledForm1" class="col-7 mx-auto">
+                            <div id="populateTitle1">
+                                <h1 class="ta-c mb-1">About Me</h1>
+                            </div>
+                            <div class="row pb-5" id="everythingInForm1">drerit nisl, vitae consectetur quam. Nunc id
+                                metus in quam convallis fringilla. Duis cursus ex sed odio feugiat, sit amet sagittis
+                                leo tristique. Maecenas viverra eu est ut accumsan. Vivamus nec laoreet ex. In aliquet
+                                massa nulla, eu bibendum est sodales quis. Cras condimentum fermentum felis, pharetra
+                                rutrum enim luctus at. Praesent elementum bibendum sagittis. Integer accumsan odio
+                                magna, quis faucibus erat lobortis ac.</div>
+                        </div>
+                        <div id="filledForm2" class="col-7 mx-auto">
+                            <div id="populateTitle2">
+                                <h1 class="ta-c mb-1">Personal Info</h1>
+                            </div>
+                            <div class="row pb-5" id="everythingInForm2">
+                                <div class="col-6" id="populateHeadlines2">
+                                    <div class="bold pb-2">Name:</div>
+                                    <div class="bold pb-2">Birthday:</div>
+                                </div>
+                                <div class="col-6" id="populateInput2">
+                                    <div class="pb-2">Ahmed Ramadan</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <button class="editButton" id="editMode4" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"></button>
+                <div class="col-7 mx-auto">
+
+
+                    <!-- <h1 class="ta-c">Personal Info</h1>
+                        <div class="row pb-5">
+                            <div class="col-6">
+                                <div class="bold pb-2">Name:</div>
+                                <div class="bold pb-2">Birthday:</div>
+    
+    
+                                <div class="bold pb-2">Place of Birth:</div>
+                                <div class="bold pb-2">Nationality:</div>
+    
+                                <div id="populateHeadlines">
+                                </div>
+    
+    
+    
+                            </div>
+                            <div class="col-6">
+                                <div class=" pb-2" id="nameSaved"></div>
+                                <div class=" pb-2" id="birthdaySaved"></div>
+    
+    
+                                <div class=" pb-2" id="pobSaved"></div>
+                                <div class=" pb-2" id="nationSaved"></div>
+    
+    
+    
+                                <div id="populateInput"></div>
+    
+    
+                            </div>
+                        </div> -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="floatingButton" data-bs-toggle="modal" data-bs-target="#formModal" id="change"></button>
+
+    <!-- Modal -->
+    <div class="modal fade show" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true"
+        role="dialog" style="display: block; padding-left: 0px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- MODAL HEADER -->
+                <div class="modal-body">
+                    <!-- INSIDE MODAL -->
+                    <!-- <h3 class="ta-c" id="aboutme">About Me</h3>
+                        <textarea class="col-12" style="resize: none;" rows="3" type="text" id="aboutmeModal"
+                            value=""></textarea>
+                        <br> -->
+
+
+
+
+                    <!-- <div id="form" style="background-color: yellow;"> -->
+                    <!-- <div class="d-flex justify-content-center"><input type="text" class="ta-c bold col-6"></div> -->
+
+                    <!-- <div class="row pb-1">
+                        <div class="col-5">
+                            <div id="newHeadlineType"></div>
+                        </div>
+                        <div class="col-5">
+                            <div id="newInputType"></div>
+                        </div>
+                        <div class="col-1">
+                            <div id="newDeleteType"></div>
+                        </div>
+                    </div> -->
+
+
+
+
+                    <div id="basicForm" class="form">
+                        <h3 class="ta-c">Hey! Did you already register?</h3>
+                        <h4 class="ta-c">If so, please log in!</h4>
+                        <!-- <div class="col-9 mx-auto">
+                            <label class="col-5 bold" for="nonExistException"></label>
+                            <div class="ta-c" id="nonExistException"></div>
+                        </div> -->
+                        <div class="row pb-1">
+                            <!-- <div class="col-2 mx-auto my-auto"> -->
+                            <!-- <div class="bold pb-2">Username:</div> -->
+                            <!-- </div> -->
+                            <div class="col-9 mx-auto">
+                                <label class="col-5 bold" for="userID">Username:</label>
+                                <input type="text" class="my-1" placeholder="JohnDoe1" id="userID" required>
+                            </div>
+                            <div class="col-9 mx-auto">
+                                <!-- <label class="col-5 bold" for="nonExistException"></label> -->
+                                <div class="ta-c" id="nonExistException"></div>
+                            </div>
+
+                            <div class="col-9 mx-auto ta-c py-3">
+                                <button type="button" class="btn btn-primary" onclick="signIn()">Sign In</button>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                        <div class="row pb-1">
+                            <h3 class="ta-c">Or Maybe you're new to this</h3>
+                            <h4 class="ta-c">Let's create your Profile!</h4>
+
+
+                            <!-- <div class="col-2 mx-auto my-auto"> -->
+                            <!-- <div class="bold pb-2">Name:</div>
+                                <div class="bold pb-2">Email:</div>
+                                <div class="bold pb-2">Phone:</div>
+                                <div class="bold pb-2">Address:</div>
+ -->
+
+                            <!-- </div> -->
+                            <div class="col-9 mx-auto ta-c py-3">
+                                <button class="btn btn-primary btn-floating" onclick="addCreationForm()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div id="hereComesFooter"> </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 
+    
+    
+        <button  data-bs-toggle="modal" data-bs-target="#chooseWhich" id="change">TRING MODAL</button>
+    
+    
+    <div class="modal fade" id="chooseWhich" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+               
+                
+    
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    
+    
+                    
+                    <h3 class="ta-c" id="aboutme">About Me</h3>
+                    <textarea class="col-12" style="resize: none;" rows="3" type="text" id="aboutmeModal"
+                        value=""></textarea>
+                    <br>
+    
+    
+    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="saveResume()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     -->
+
+
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="obj.js"></script>
+    <script src="additionalHTML.js"></script>
+    <script src="script.js"></script>
+    <!-- <script src="clean code.js"></script> -->
+    <div class="modal-backdrop fade show"></div>
+</body>
+
+</html>
