@@ -13,149 +13,145 @@
     <title>Resume</title>
 
     <link href="Style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7323eb76b3.js" crossorigin="anonymous"></script>
 
 </head>
 
-<div id="resume"></div>
+
+<body>
 
 
+    <div class="container-fluid">
+        <div class="row px-2 mt-3">
 
+            <div class="h-25 d-inline-block col-10 col-sm-10 col-md-3 px-1 mx-auto b-rad-1 rela primaryCard">
 
+                <div class="p-2 m-2">
+                    <img src="random.jpeg" class="b-rad-2 col-12">
+                    <h2 class="ta-c col-12" id="nameShown">John Doe</h2>
+                    <div class="row mx-auto">
+                        <div class="col-1">
 
-<div class="container-fluid">
-    <div class="row px-2 mt-3">
-        <div class="col-10 col-sm-10 col-md-3 px-1 mx-auto bg-primary b-rad-1 rela">
-            <!-- <button class="editButton" id="editMode2"></button> -->
+                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-phone-alt"></i>
+                            <label for="addressShown"><i class="fas fa-home"></i></label>
 
-            <div class="p-2 m-2">
-                <img src="random.jpeg" class="b-rad-2 col-12">
-                <h2 class="ta-c col-12" id="nameShown"> Ahmed Ramadan</h2>
-                <div class="row">
-                    <div class="col-6 ps-md-1 ps-5">
-                        <div class="bold">Age:</div>
-                        <div class="bold">Location:</div>
-                        <div class="bold">Nationality:</div>
-                    </div>
-                    <div class="col-6">
-                        <div class="right" id="age"></div>
-                        <div class="right">Germany</div>
-                        <div class="right">Egyptian</div>
-                    </div>
-                    <!-- <a class="buttonLink col-6  mx-auto mb-2" href="#aboutme">
-                            About Me
-                        </a>
-                        <div class="col-6">
 
                         </div>
-
-                        <a class="buttonLink col-3 mx-auto">
-                            Resume
-                        </a>
-                        <a class="buttonLink col-3  mx-auto">
-                            Contact
-                        </a> -->
-                    <!-- TODO: add Functionality -->
-                    <!-- <a href="./aboutMe.html" class="col-12  mx-auto">DOWNLOAD RESUME</a> -->
+                        <div class="col-10">
+                            <div class="" id="emailShown">JohnDoe@email.com</div>
+                            <div class="" id="phoneNumberShown">01234578900</div>
+                            <div class="" id="addressShown">Somewhere far awaay</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-10 col-sm-10 col-md-8 col-lg-8 mx-auto bg-primary mt-2 mt-sm-2 mt-md-0 b-rad-2 rela">
-            <button class="editButton" id="editMode4" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
-            <div class="col-7 mx-auto">
+            <div class="col-10 col-sm-10 col-md-8 col-lg-8 mx-auto py-4 mt-2 mt-sm-2 mt-md-0 b-rad-2 rela primaryCard">
 
-                <h1 class="ta-c">About Me</h1>
-                <div class="pb-5" id="aboutmeSaved"></div>
-                <h1 class="ta-c">Personal Info</h1>
-                <div class="row pb-5">
-                    <div class="col-6">
-                        <div class="bold pb-2">Name:</div>
-                        <div class="bold pb-2">Birthday:</div>
-                        <div class="bold pb-2">Place of Birth:</div>
-                        <div class="bold pb-2">Nationality:</div>
-
-                        <div id="populateHeadlines">
-                        </div>
-
-
-
-                    </div>
-                    <div class="col-6">
-                        <div class=" pb-2" id="nameSaved"></div>
-                        <div class=" pb-2" id="birthdaySaved"></div>
-                        <div class=" pb-2" id="pobSaved"></div>
-                        <div class=" pb-2" id="nationSaved"></div>
-
-
-                        <div id="populateInput"></div>
-
-
-                    </div>
-                </div>
-
-
-
-
-                <h1 class="ta-c">Academic</h1>
-                <div class="row pb-5">
-
-
-
-
-
-                    <div class="col-6">
-                        <div class="bold">Since 11/20</div>
-                        <br><br>
-                        <div class="bold">09/2006 – 06/2020</div>
-                        <div class="bold"></div>
-
-                    </div>
-
-
-
-
-                    <div class="col-6">
-                        <div class="right">University of Stuttgart</div>
-                        <div class="right">Mechatronics (BSc)</div>
-                        <br>
-                        <div class="right">DEO Kairo</div>
-                        <div class="right">Abitur (NC: 1,9)</div>
-                    </div>
-
-
-
-
+                <button class="editButton" id="editMode4" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"></button>
+                <div class="col-7 mx-auto">
+                    <div id="resume"></div>
 
                 </div>
             </div>
         </div>
     </div>
-</div>
-<button class="floatingButton" data-bs-toggle="modal" data-bs-target="#exampleModal" id="change"></button>
-</button>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- MODAL HEADER -->
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            <div class="modal-body">
-                <!-- INSIDE MODAL -->
-                <h3 class="ta-c" id="aboutme">About Me</h3>
-                <textarea class="col-12" style="resize: none;" rows="3" type="text" id="aboutmeModal"
-                    value=""></textarea>
-                <br>
-
-                <div id="formArea">
+    <button class="floatingButton" data-bs-toggle="modal" data-bs-target="#formModal" id="change"></button>
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- MODAL HEADER -->
 
 
+                <div class="modal-body">
+                    <!-- INSIDE MODAL -->
 
-                </div>
+
+                    <div class="row">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h2 id="userID" class="ta-c" style="font-style: italic;"></h2>
+                    </div>
 
 
-                <!-- <div id="form" style="background-color: yellow;"> -->
-                <!-- <div class="d-flex justify-content-center"><input type="text" class="ta-c bold col-6"></div> -->
 
-                <div class="row pb-1">
+
+                    <div id="basicForm" class="form">
+                        <div class="row pb-1">
+                            <h3 class="ta-c">Main Card Information</h3>
+                            <div id="creationForm2" class="col-9 mx-auto">
+
+                                <label class="col-5 bold" for="nameOfUser">Name:</label>
+                                <input type="text" class="my-1" id="nameOfUser">
+                                <label class="col-5 bold" for="email">Email:</label>
+                                <input type="text" class="my-1" placeholder="Johndoe@email.com" id="email">
+                                <label class="col-5 bold" for="phoneNumber">Phone Number:</label>
+                                <input type="text" class="my-1" placeholder="+20123457875" id="phoneNumber">
+                                <label class="col-5 bold" for="address">Address:</label>
+                                <input type="text" class="my-1" placeholder="879 W. Brook Road Glen Cove, NY 11542"
+                                    id="address">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div id="form4" class="form">
+                        <button type="button" class="btn-close" onclick="deleteFormArea(4)"></button>
+                        <div class="d-flex justify-content-center">
+                            <input type="text" placeholder="Title..." id="titleInput4" class="ta-c bold col-6 mb-2">
+                        </div>
+                        <div class="row pb-1">
+                            
+                            <div id="inputBullets" class="mx-auto my-1">
+                                <input type="text" placeholder="Headline:" id="newHeadline"class="bold ms-4">
+                                <input type="text" class="" placeholder="Text..." id="newInput">
+                                <button type="button" class="btn-close" onclick="deleteInput()">
+                            </div>
+
+
+                                                  
+
+                            <div class="col-4 mx-auto">
+                                <div id="newHeadlineType4">
+                                    <input type="text" placeholder="Headline:" id="newHeadline7"class="bold my-1">
+                                    <input type="text" placeholder="Headline:" id="newHeadline8"
+                                        class="bold my-1"><input type="text" placeholder="Headline:" id="newHeadline9"
+                                        class="bold my-1"></div>
+                            </div>
+                            <div class="col-4 mx-auto">
+                                <div id="newInputType4"><input type="text" class="my-1" placeholder="Text..."
+                                        id="newInput7"><input type="text" class="my-1" placeholder="Text..."
+                                        id="newInput8"><input type="text" class="my-1" placeholder="Text..."
+                                        id="newInput9"></div>
+                            </div>
+                            <div class="col-1 mx-auto">
+                                <div id="newDeleteType4"><button id="delete7" type="button" class="btn-close mb-3"
+                                        onclick="deleteInput(7)"></button><button id="delete8" type="button"
+                                        class="btn-close mb-3" onclick="deleteInput(8)"></button><button id="delete9"
+                                        type="button" class="btn-close mb-3" onclick="deleteInput(9)"></button></div>
+                            </div>
+                        </div><button class="addInputs btn btn-primary" type="button" onclick="addFormBullet(4)"><i
+                                class="fas fa-plus" aria-hidden="true"></i></button>
+                    </div> -->
+
+
+
+
+
+
+                    <!-- <h3 class="ta-c" id="aboutme">About Me</h3>
+                    <textarea class="col-12" style="resize: none;" rows="3" type="text" id="aboutmeModal"
+                        value=""></textarea>
+                    <br> -->
+
+
+
+
+                    <!-- <div id="form" style="background-color: yellow;"> -->
+                    <!-- <div class="d-flex justify-content-center"><input type="text" class="ta-c bold col-6"></div> -->
+
+                    <!-- <div class="row pb-1">
                     <div class="col-5">
                         <div id="newHeadlineType"></div>
                     </div>
@@ -165,19 +161,51 @@
                     <div class="col-1">
                         <div id="newDeleteType"></div>
                     </div>
-                </div>
+                </div> -->
+
+                    <!-- <div id="basicForm" class="form">
+                        <h3 class="ta-c">Main Card Information</h3>
+                        <div class="row pb-1">
+                            <div class="col-2 mx-auto my-auto">
+                                <div class="bold pb-2 ">Username:</div>
+                                <div class="bold pb-2 ">Name:</div>
+                                <div class="bold pb-2">Birthday:</div>
+                                <div class="bold pb-2">Email:</div>
+                                <div class="bold pb-2">Nationality:</div>
+
+
+                            </div>
+                            <div class="col-5 mx-auto">
+
+                                <input type="text" class="my-1 disabled" id="userID">
+                                <input type="text" class="my-1" placeholder="John Doe" id="nameOfUser">
+                                // <input type="text" class="my-1" placeholder="Text..." id="">
+                                <div class="col-12 mx-auto">
+                                    <select class="col-3 mx-auto" id="bDayOptions">
+                                        <option value="" selected disabled hidden>DD</option>
+                                    </select>
+
+                                    <select class="col-4 mx-auto" id="bMonthOptions">
+                                        <option value="" selected disabled hidden>MM</option>
+                                    </select>
+
+                                    <select class="col-4 mx-auto" id="bYearOptions">
+                                        <option value="" selected disabled hidden>YYYY</option>
+                                    </select>
+                                </div>
+
+
+                                <input type="text" class="my-1" placeholder="JohnDoe@email.com" id="email">
+                                <input type="text" class="my-1" placeholder="American" id="nationality">
+                            </div>
+                        </div>
+                    </div> -->
 
 
 
+                    <!-- </div> -->
 
-
-                <!-- </div> -->
-
-                <h3 class="ta-c">Personal Info</h3>
-                <button type="button" onclick="addFormArea()">ADD Form</button>
-
-
-
+                    <!-- <h3 class="ta-c">Basic Info</h3>
                 <div class="row pb-1">
                     <div class="col-5">
 
@@ -196,9 +224,21 @@
                     </div>
                     <div class="col-5">
                         <input type="text" id="nameModal" value="">
-                        <input type="number" min="1" max="31" id="bDayModal" class="col-3" value="">
-                        <input type="number" min="1" max="12" id="bMonthModal" class="col-3" value="">
-                        <input type="number" min="1945" max="2005" id="bYearModal" class="col-5" value="">
+                        
+                
+                        <select id="bDayOptions">
+                            <option value="" selected disabled hidden>DD</option>
+                        </select>
+
+                        <select id="bMonthOptions">
+                            <option value="" selected disabled hidden>MM</option>
+                        </select>
+
+                        <select id="bYearOptions">
+                            <option value="" selected disabled hidden>YYYY</option>
+                        </select>
+
+
                         <input type="text" id="pobModal" value="">
                         <input type="text" id="nationModal" value="">
 
@@ -218,17 +258,67 @@
                         <div id="newDeleteType">
 
                         </div>
-                        <!--             
-                            <button id="delete1" style="visibility: hidden;" onclick="deleteInput(1)"> Delete </button>
-                            <button id="delete2" style="visibility: hidden;" onclick="deleteInput(2)"> Delete </button>
-                            <button id="delete3" style="visibility: hidden;" onclick="deleteInput(3)"> Delete </button>
-                            <button id="delete4" style="visibility: hidden;" onclick="deleteInput(4)"> Delete </button> -->
                     </div>
 
-                </div>
+                </div> -->
 
-                <button onclick="removeMounBullet()" ; type="button">Removex</button>
-                <h3 class="ta-c">Academic</h3>
+
+                    <div id="formArea">
+                        <!-- HERE COME FORMS -->
+                    </div>
+
+
+                    <div class="ta-c">
+                        <div class="dropdown ta-c">
+                            <button class="btn btn-primary btn-floating">
+                                <i class="fas fa-plus"></i>
+
+
+                            </button>
+                            <div class="dropdown-content">
+                                <a onclick="addFormArea()">Insert Form</a>
+                                <a onclick="addTypingArea()">Insert Text</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <div id="emptyException"></div>
+                    <img src="loading.gif" id="loadingGif" class="pe-2" style="display:none; width: 35px;">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="saveResume()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 
+
+
+    <button  data-bs-toggle="modal" data-bs-target="#chooseWhich" id="change">TRING MODAL</button>
+
+
+<div class="modal fade" id="chooseWhich" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+           
+            
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                
+
+                
+                <h3 class="ta-c" id="aboutme">About Me</h3>
+                <textarea class="col-12" style="resize: none;" rows="3" type="text" id="aboutmeModal"
+                    value=""></textarea>
+                <br>
 
 
 
@@ -240,17 +330,44 @@
         </div>
     </div>
 </div>
+ -->
 
-<!-- Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="obj.js"></script>
-<!-- <script src="script.js"></script> -->
-<script src="clean code.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="obj.js"></script>
+    <script src="additionalHTML.js"></script>
+    <script src="script.js"></script>
+    <!-- <script src="clean code.js"></script> -->
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            console.log("ready!");
+            var searchQuery = window.location.search;
+            console.log(window.location.search);
+            var searchUser = searchQuery.slice(6);
+            if (searchUser == "") {
+                //TODO navigate to login
+            } else {
+                getUserAndPopulate(searchUser);
+                getUserData(searchUser)
+            }
+        });
+
+    </script>
+
+
+
+
 
 </body>
 
